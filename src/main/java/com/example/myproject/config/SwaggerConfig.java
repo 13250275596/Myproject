@@ -31,7 +31,7 @@ public class SwaggerConfig {
         ApiInfo apiInfo = new ApiInfo("用户相关接口",//大标题
                 "关于用户添加的接口" ,//小标题
                 "0.1",//版本
-                "成都",
+                "广州",
                 new Contact("zjw","s","564013650@qq.com").toString(),// 作者
                 "",//链接显示文字
                 ""//网站链接
