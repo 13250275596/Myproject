@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("")
@@ -28,8 +29,9 @@ public class mainController {
     @RequestMapping(value = "/getusers",method = RequestMethod.GET)
     @ResponseBody
     @ApiOperation(value = "/getusers")
-    public List<User> getAllUser(){
-        List<User> users = userDataService.getAllUsers();
+    public Map<Integer,Map<String,Object>> getAllUser(){
+//        List<User> users = userDataService.getAllUsers();
+        Map<Integer,Map<String,Object>> users = userDataService.getUserMap();
         return users;
     }
 

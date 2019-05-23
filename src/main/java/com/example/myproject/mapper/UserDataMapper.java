@@ -2,12 +2,10 @@ package com.example.myproject.mapper;
 
 import com.example.myproject.dto.res.UserParam;
 import com.example.myproject.entity.User;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.SelectProvider;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface UserDataMapper {
@@ -19,6 +17,14 @@ public interface UserDataMapper {
             "</where>" +
             "</script>")
     User getUserBy(@Param("user") UserParam user);
+
+    @MapKey("id")
+    @Select("<script>select * from user u " +
+//            "<where>" +
+//            "u.id = 1" +
+//            "</where>" +
+            "</script>")
+    Map<Integer,Map<String,Object>> getUserMap();
 
     @SelectProvider(type = UserDataProvider.class,method = "getAllUsers")
     List<User> getAllUsers();
