@@ -33,8 +33,8 @@ public class SwaggerConfig {
                 "0.1",//版本
                 "广州",
                 new Contact("zjw","s","564013650@qq.com").toString(),// 作者
-                "",//链接显示文字
-                ""//网站链接
+                "666",//链接显示文字
+                "www.baidu.com"//网站链接
         );
         return apiInfo;
     }
