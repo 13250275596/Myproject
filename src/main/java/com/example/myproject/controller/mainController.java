@@ -29,9 +29,9 @@ public class mainController {
     @RequestMapping(value = "/getusers",method = RequestMethod.GET)
     @ResponseBody
     @ApiOperation(value = "/getusers")
-    public Map<Integer,Map<String,Object>> getAllUser(){
+    public List<Map<String,Object>> getAllUser(){
 //        List<User> users = userDataService.getAllUsers();
-        Map<Integer,Map<String,Object>> users = userDataService.getUserMap();
+        List<Map<String,Object>> users = userDataService.getUserMap();
         return users;
     }
 

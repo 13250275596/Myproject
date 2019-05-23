@@ -24,7 +24,7 @@ public interface UserDataMapper {
 //            "u.id = 1" +
 //            "</where>" +
             "</script>")
-    Map<Integer,Map<String,Object>> getUserMap();
+    List<Map<String,Object>> getUserMap();
 
     @SelectProvider(type = UserDataProvider.class,method = "getAllUsers")
     List<User> getAllUsers();

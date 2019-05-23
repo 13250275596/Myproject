@@ -22,7 +22,7 @@ public class UserDataService extends AbstractService<UserDataMapper> {
     }
 
     @Transactional
-    public Map<Integer,Map<String,Object>> getUserMap(){
+    public List<Map<String,Object>> getUserMap(){
         return this.mapper.getUserMap();
     }
     @Transactional
