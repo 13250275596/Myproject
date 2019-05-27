@@ -12,6 +12,11 @@ import java.util.Map;
 public class UserDataService extends AbstractService<UserDataMapper> {
 
     @Transactional
+    public User getUserById(Integer id) {
+        return this.mapper.getUserById(id);
+    }
+
+    @Transactional
     public List<User> getAllUsers(){
         return this.mapper.getAllUsers();
     };

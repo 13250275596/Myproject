@@ -10,6 +10,9 @@ import java.util.Map;
 @Mapper
 public interface UserDataMapper {
 
+    @Select("select * from user where id = #{id}")
+    User getUserById(@Param("id") Integer id);
+
     @Select("<script>select * from user " +
             "<where>" +
             "<if test= 'user.id !=null and user.id !=0 '> id = #{user.id} </if>" +
