@@ -25,8 +25,8 @@ public class MyprojectApplication {
     @Configuration
     static class WebMvcConfigurer extends WebMvcConfigurerAdapter {
         WebMvcConfigurer() {
+            
         }
-
         public void addInterceptors(InterceptorRegistry registry) {
             registry.addInterceptor(new HandlerInterceptorAdapter() {
                 public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
