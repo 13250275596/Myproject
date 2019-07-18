@@ -8,6 +8,7 @@
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "WebPractise"
+		"liveServer.settings.multiRootWorkspaceName": "WebPractise",
+		"java.configuration.updateBuildConfiguration": "automatic"
 	}
 }

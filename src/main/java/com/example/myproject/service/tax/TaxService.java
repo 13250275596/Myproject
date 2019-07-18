@@ -1,4 +1,4 @@
-package com.example.myproject.service.taxservice;
+package com.example.myproject.service.tax;
 
 import org.springframework.stereotype.Service;
 
