@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
@@ -14,16 +13,16 @@ import javax.servlet.http.HttpServletResponse;
 
 @ComponentScan("com.*")
 @SpringBootApplication
-public class MyprojectApplication {
+public class App {
 
     public static void main(String[] args) {
-        SpringApplication.run(MyprojectApplication.class, args);
+        SpringApplication.run(App.class, args);
     }
 
 
     //配置Swagger
     @Configuration
-    static class WebMvcConfigurer extends WebMvcConfigurerAdapter {
+    static class WebMvcConfigurer extends App {
         WebMvcConfigurer() {
             
         }
